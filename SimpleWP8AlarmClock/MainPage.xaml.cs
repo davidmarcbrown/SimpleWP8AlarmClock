@@ -8,34 +8,62 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using SimpleWP8AlarmClock.Resources;
+using Microsoft.Phone.Scheduler;
 
 namespace SimpleWP8AlarmClock
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        // Constants
+        const String ALARM_NAME = "Simple WP8 Alarm Clock";
+        const String ALARM_CONTENT = "Simple WP8 Alarm Clock";
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
 
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            updateUI();
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            updateUI();
+        }
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
+        private void updateUI()
+        {
+            Alarm existingAlarm = (Alarm) ScheduledActionService.Find(ALARM_NAME);
 
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+            if (existingAlarm != null && existingAlarm.IsEnabled == true)
+            {
+                alarmInfo_panel.Visibility = Visibility.Visible;
+                setAlarm_panel.Visibility = Visibility.Collapsed;
+                ((ApplicationBarIconButton)ApplicationBar.Buttons[0]).IsEnabled = false;
+                ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = true;
+            }
+            else
+            {
+                alarmInfo_panel.Visibility = Visibility.Collapsed;
+                setAlarm_panel.Visibility = Visibility.Visible;
+                ((ApplicationBarIconButton)ApplicationBar.Buttons[0]).IsEnabled = true;
+                ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).IsEnabled = false;
+            }
+        }
+
+        private void ApplicationBarDeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApplicationBarSaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alarmTimePicker_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+
+        }
     }
 }

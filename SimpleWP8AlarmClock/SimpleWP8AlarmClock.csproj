@@ -121,6 +121,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\AppbarButtons\Thumbs.db" />
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -128,6 +130,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppbarButtons\add.png" />
+    <Content Include="Assets\AppbarButtons\back.png" />
+    <Content Include="Assets\AppbarButtons\basecircle.png" />
+    <Content Include="Assets\AppbarButtons\cancel.png" />
+    <Content Include="Assets\AppbarButtons\check.png" />
+    <Content Include="Assets\AppbarButtons\close.png" />
+    <Content Include="Assets\AppbarButtons\delete.png" />
+    <Content Include="Assets\AppbarButtons\download.png" />
+    <Content Include="Assets\AppbarButtons\edit.png" />
+    <Content Include="Assets\AppbarButtons\favs.addto.png" />
+    <Content Include="Assets\AppbarButtons\favs.png" />
+    <Content Include="Assets\AppbarButtons\feature.alarm.png" />
+    <Content Include="Assets\AppbarButtons\feature.calendar.png" />
+    <Content Include="Assets\AppbarButtons\feature.camera.png" />
+    <Content Include="Assets\AppbarButtons\feature.email.png" />
+    <Content Include="Assets\AppbarButtons\feature.phone.png" />
+    <Content Include="Assets\AppbarButtons\feature.search.png" />
+    <Content Include="Assets\AppbarButtons\feature.settings.png" />
+    <Content Include="Assets\AppbarButtons\feature.video.png" />
+    <Content Include="Assets\AppbarButtons\folder.png" />
+    <Content Include="Assets\AppbarButtons\like.png" />
+    <Content Include="Assets\AppbarButtons\microphone.png" />
+    <Content Include="Assets\AppbarButtons\minus.png" />
+    <Content Include="Assets\AppbarButtons\new.png" />
+    <Content Include="Assets\AppbarButtons\next.png" />
+    <Content Include="Assets\AppbarButtons\overflowdots.png" />
+    <Content Include="Assets\AppbarButtons\questionmark.png" />
+    <Content Include="Assets\AppbarButtons\refresh.png" />
+    <Content Include="Assets\AppbarButtons\save.png" />
+    <Content Include="Assets\AppbarButtons\share.png" />
+    <Content Include="Assets\AppbarButtons\stop.png" />
+    <Content Include="Assets\AppbarButtons\sync.png" />
+    <Content Include="Assets\AppbarButtons\transport.ff.png" />
+    <Content Include="Assets\AppbarButtons\transport.pause.png" />
+    <Content Include="Assets\AppbarButtons\transport.play.png" />
+    <Content Include="Assets\AppbarButtons\transport.rew.png" />
+    <Content Include="Assets\AppbarButtons\upload.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -153,12 +192,23 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
