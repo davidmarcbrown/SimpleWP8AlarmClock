@@ -37,11 +37,11 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="setAlarm_panel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Text="Set alarm time:" Style="{StaticResource PhoneTextTitle2Style}"/>
-                <toolkit:TimePicker x:Name="alarmTimePicker" HorizontalAlignment="Center" VerticalAlignment="Center" ValueChanged="alarmTimePicker_ValueChanged"></toolkit:TimePicker>
+                <toolkit:TimePicker x:Name="alarmTimePicker" HorizontalAlignment="Center" VerticalAlignment="Center"></toolkit:TimePicker>
             </StackPanel>
-            <StackPanel x:Name="alarmInfo_panel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock TextWrapping="Wrap" Text="Alarm is set." Style="{StaticResource PhoneTextTitle2Style}" />
-            </StackPanel>  
+            <StackPanel x:Name="alarmInfo_panel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Tap="alarmInfo_panel_Tap">
+                <TextBlock x:Name="alarmInfo_textBlock" TextWrapping="Wrap" Text="Alarm is set." Style="{StaticResource PhoneTextTitle2Style}" />
+            </StackPanel>
         </Grid>
     </Grid>
 
